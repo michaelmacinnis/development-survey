@@ -1,0 +1,250 @@
+responses:
+37
+
+languages:
+
+"unhappy":
+    python vs java, c, c++, python, smalltalk, latex, markdown, matlab, octave, html, javascript, css, php, assembly, sql, shell, xml
+    rust vs go, helm, shell, rust, c, python
+    rust vs javascript, python, java, html, css, rust, c, c++
+    c++ vs python, java, c#, c++, javascript, html, css, c
+    haskell vs python, java, javascript, racket, haskell, c++, html, css
+
+most mentioned:
+    Python: 35
+    Java: 26
+    HTML: 23
+    CSS: 21
+    JavaScript: 21
+    C: 18
+    C++: 18
+    Shell: 11
+    SQL: 9
+    Go: 7
+    R: 7
+    C#: 6
+    PHP: 6
+    Kotlin: 4
+    Assembly: 3
+    LaTeX: 3
+    Lua: 3
+    MATLAB: 3
+    Ruby: 3
+    Rust: 3
+    Haskell: 2
+    Markdown: 2
+    Scala: 2
+    Smalltalk: 2
+    TypeScript: 2
+    Brainfuck: 1
+    Crystal: 1
+    Helm: 1
+    Lisp: 1
+    OCaml: 1
+    Octave: 1
+    Perl: 1
+    PowerShell: 1
+    Racket: 1
+    VHDL: 1
+    Verilog: 1
+    Visual Basic: 1
+    XML: 1
+    awk: 1
+
+most preferred:
+    Python: 19
+    Java: 4
+    C++: 3
+    Go: 2
+    Rust: 2
+    C#: 1
+    Crystal: 1
+    Haskell: 1
+    JavaScript: 1
+    Kotlin: 1
+    Scala: 1
+
+most used:
+    Python: 22
+    Java: 6
+    Go: 3
+    JavaScript: 2
+    C#: 1
+    C++: 1
+    Crystal: 1
+
+used vs preferred:
+    MATLAB (3): 6.667
+    Java (26): 4.577
+    JavaScript (21): 3.524
+    Ruby (3): 3.0
+    HTML (23): 1.043
+    Lua (3): 1.0
+    Shell (11): 0.818
+    CSS (21): 0.667
+    Python (35): 0.486
+    SQL (9): -0.889
+    Kotlin (4): -1.5
+    Go (7): -2.286
+    PHP (6): -2.333
+    R (7): -2.429
+    C++ (18): -2.556
+    C (18): -2.889
+    LaTeX (3): -11.333
+    Rust (3): -14.333
+
+age and experience correlations:
+Kendall: -0.070 (0.627), R-Squared: 0.139 (0.420), Spearman: -0.095 (0.581), RMSD: 0.205 Age and Academic have no correlation
+Kendall: 0.487 (0.000), R-Squared: 0.563 (0.000), Spearman: 0.616 (0.000), RMSD: 0.242 Age and Personal have a strong positive correlation
+Kendall: 0.531 (0.000), R-Squared: 0.616 (0.000), Spearman: 0.633 (0.000), RMSD: 0.234 Age and Professional have a strong positive correlation
+
+experience correlations:
+Kendall: 0.396 (0.001), R-Squared: 0.611 (0.000), Spearman: 0.515 (0.001), RMSD: 0.235 Personal and Professional have a moderate to strong positive correlation
+
+language preference and demographic/experience correlations:
+Kendall: 0.408 (0.005), R-Squared: 0.491 (0.002), Spearman: 0.465 (0.004), RMSD: 0.269 Age and C have a strong positive correlation
+Kendall: 0.358 (0.006), R-Squared: 0.489 (0.002), Spearman: 0.436 (0.008), RMSD: 0.270 Professional and C have a moderate to strong positive correlation
+Kendall: 0.342 (0.008), R-Squared: 0.424 (0.010), Spearman: 0.420 (0.011), RMSD: 0.305 Personal and C++ have a moderate to strong positive correlation
+Kendall: 0.452 (0.000), R-Squared: 0.560 (0.000), Spearman: 0.566 (0.000), RMSD: 0.305 Academic and Java have a strong positive correlation
+
+language use and demographic/experience correlations:
+Kendall: 0.411 (0.005), R-Squared: 0.506 (0.002), Spearman: 0.475 (0.003), RMSD: 0.231 Age and C have a strong positive correlation
+Kendall: 0.403 (0.002), R-Squared: 0.472 (0.004), Spearman: 0.506 (0.002), RMSD: 0.237 Professional and C have a strong positive correlation
+Kendall: 0.482 (0.000), R-Squared: 0.570 (0.000), Spearman: 0.624 (0.000), RMSD: 0.326 Academic and Java have a strong positive correlation
+
+language preference correlations:
+Kendall: 0.432 (0.002), R-Squared: 0.600 (0.000), Spearman: 0.522 (0.001), RMSD: 0.270 C and C++ have a strong positive correlation
+Kendall: 0.723 (0.000), R-Squared: 0.703 (0.000), Spearman: 0.792 (0.000), RMSD: 0.183 CSS and HTML have a very strong positive correlation
+Kendall: 0.591 (0.000), R-Squared: 0.546 (0.001), Spearman: 0.741 (0.000), RMSD: 0.253 CSS and JavaScript have a strong to very strong positive correlation
+Kendall: 0.491 (0.000), R-Squared: 0.532 (0.001), Spearman: 0.637 (0.000), RMSD: 0.256 HTML and JavaScript have a strong positive correlation
+Kendall: 0.421 (0.001), R-Squared: 0.431 (0.009), Spearman: 0.531 (0.001), RMSD: 0.273 Java and JavaScript have a strong positive correlation
+
+language use correlations:
+Kendall: 0.745 (0.000), R-Squared: 0.838 (0.000), Spearman: 0.837 (0.000), RMSD: 0.162 CSS and HTML have a very strong positive correlation
+Kendall: 0.402 (0.002), R-Squared: 0.465 (0.004), Spearman: 0.535 (0.001), RMSD: 0.309 CSS and JavaScript have a strong positive correlation
+
+platforms:
+
+"unhappy":
+    linux vs macos, windows, android, linux, iOS, wsl, bsd
+    windows vs android, windows, wsl, linux, linux
+    macos vs windows, linux, linux, macos
+    macos vs windows, macos
+    linux vs macos, windows, linux, wsl, aix
+    linux vs windows, macos, linux, wsl
+    wsl vs linux, wsl, bsd
+
+most mentioned:
+    Windows: 30
+    Linux: 28
+    macOS: 21
+    WSL: 12
+    iOS: 11
+    Android: 10
+    BSD: 4
+    AIX: 1
+    ChromeOS: 1
+    Web: 1
+
+most preferred:
+    Linux: 12.5
+    macOS: 12
+    Windows: 10.5
+    WSL: 1
+    Web: 1
+
+most used:
+    Windows: 12.5
+    macOS: 12
+    Linux: 10.5
+    Android: 1
+    Web: 1
+
+platform preference and demographic/experience correlations:
+
+platform use and demographic/experience correlations:
+
+tools:
+
+most mentioned:
+    Visual Studio Code: 18
+    JetBrains: 17
+    git: 15
+    Docker: 10
+    GitHub: 8
+    GitLab: 6
+    vi: 6
+    Jupyter Notebooks: 5
+
+most preferred:
+    JetBrains: 10
+    Visual Studio Code: 7
+    vi: 4
+    Azure: 1
+    Google Colab: 1
+    Python: 1
+    RStudio: 1
+    Unity: 1
+    git: 1
+
+most used:
+    Visual Studio Code: 7
+    JetBrains: 6
+    vi: 3
+    git: 2
+    Atlassian: 1
+    Azure: 1
+    Eclipse: 1
+    Google Colab: 1
+    Jupyter Notebooks: 1
+    Maven: 1
+    Python: 1
+    WebRatio: 1
+    minikube: 1
+
+used vs preferred:
+    Visual Studio Code (18): 2.444
+    Docker (10): 1.8
+    vi (6): 0.667
+    Jupyter Notebooks (5): -0.4
+    JetBrains (17): -0.588
+    GitHub (8): -0.75
+    git (15): -1.133
+    GitLab (6): -1.667
+
+tool preference and demographic/experience correlations:
+
+tool use and demographic/experience correlations:
+
+tool preference correlations:
+Kendall: 0.431 (0.008), R-Squared: 0.531 (0.004), Spearman: 0.564 (0.002), RMSD: 0.301 Docker and git have a strong positive correlation
+
+tool use correlations:
+
+specific terms:
+
+browser:
+    awful: 2
+    preferred: 2
+    used: 2
+
+docker:
+    used: 12
+    preferred: 10
+    awesome: 1
+
+git:
+    used: 25
+    preferred: 21
+    awesome: 2
+
+kubernetes:
+    preferred: 4
+    used: 4
+    awful: 3
+
+terminal:
+    awesome: 1
+    used: 1
+
+done

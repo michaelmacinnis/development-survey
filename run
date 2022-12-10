@@ -1,0 +1,3 @@
+#!/usr/bin/env oh
+
+grep -v '^#' data.csv | python3 parse.py

@@ -1,0 +1,17 @@
+#!/usr/bin/env oh
+
+block {
+	echo 'digraph {'
+	echo 'rankdir="LR"'
+	grep "^$1 graph: " $2 | sed -e "s/^$1 graph: //g" | awk '{
+		edge[$0]++
+	} END {
+		for (e in edge) {
+			if (edge[e] > 0) {
+				printf("%s [weight=%d];\n", e, edge[e])
+			}
+		}
+	}'
+
+	echo '}'
+} | dot -Tpng >| "img/Web-of-Language-$1.png"
