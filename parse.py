@@ -12,6 +12,8 @@ from scipy.stats import spearmanr
 
 from sklearn.metrics import mean_squared_error
 
+correlations_tested = 0
+
 label = {
     "academic_exp": "Years of experience making software in an academic setting",
     "awesome": "Platforms/languages/programs/tools/technologies that are awesome and why",
@@ -113,7 +115,7 @@ def cleaned(s):
         "bitbucket)": "atlassian",
         "bsd": "bsd",
         "centos": "linux",
-        "chrome os": "ChromeOS",
+        "chrome os": "chromeos",
         "clang": "llvm",
         "clion": "jetbrains",
         "collaboration platforms (e.g.": None,
@@ -134,7 +136,7 @@ def cleaned(s):
         "image manipulators (e.g.": None,
         "imovie (video editing) (skype": "imovie",  # Skip skype it only came up once.
         "intellij": "jetbrains",
-        "ios": "iOS",
+        "ios": "ios",
         "irc)": "irc",
         "it's hard to give": None,
         "java script": "javascript",
@@ -196,6 +198,10 @@ def cleaned(s):
 
 
 def correlation(title, k1, k2, v1, v2, plot=False):
+    global correlations_tested
+
+    correlations_tested += 1
+
     kt, kp = map(lambda n: round(n, 3), kendalltau(v1, v2))
     sr, sp = map(lambda n: round(n, 3), spearmanr(v1, v2))
 
@@ -205,9 +211,7 @@ def correlation(title, k1, k2, v1, v2, plot=False):
         return
 
     file = sys.stderr
-    if plot or (
-        max(kp, lp, sp) <= 0.012 and all(map(lambda x: x > 0.3, (kt, lr, sr)))
-    ):
+    if plot or (max(kp, lp, sp) <= 0.012 and all(map(lambda x: x > 0.3, (kt, lr, sr)))):
         file = sys.stdout
 
     y = [m * x + b for x in v1]
@@ -235,13 +239,17 @@ def correlation(title, k1, k2, v1, v2, plot=False):
         scores = scores.replace(*e)
 
     plt.scatter(v1, v2)
-    plt.title("\n".join([title, scores]))
+#    plt.title("\n".join([title, scores]))
+    plt.title(scores)
     plt.xlabel(k1)
     plt.ylabel(k2)
 
+    plt.xticks([])
+    plt.yticks([])
+
     plt.plot(v1, y)
 
-    plt.savefig(filename("img/", title, "-", k1, "-", k2, ".svg"), dpi=350)
+    plt.savefig(filename("img/", title, "-", k1, "-", k2, ".pdf"), dpi=350)
     plt.close()
 
 
@@ -283,9 +291,7 @@ def correlations(title, k1, k2, k3, k4, k5, k6, v1, v2, v3, v4, v5, v6):
 
 
 def counts(display_name, points, prefix="", tally={}):
-    for e in sorted(
-        points.items(), key=lambda e: (-e[1], display(display_name, e[0]))
-    ):
+    for e in sorted(points.items(), key=lambda e: (-e[1], display(display_name, e[0]))):
         n = tally.get(e[0], 0)
         print(
             prefix
@@ -520,7 +526,7 @@ def languages(rows):
         combined_pref[lang] = []
         combined_used[lang] = []
 
-    print("\"unhappy\":")
+    print('"unhappy":')
 
     for row in rows:
         pref = list_field(row[label["languages_by_pref"]])
@@ -623,9 +629,7 @@ def languages(rows):
         unit(academic_exp),
         plot=True,
     )
-    correlation(
-        "Age and Experience", "Age", "Personal", ages, unit(personal_exp)
-    )
+    correlation("Age and Experience", "Age", "Personal", ages, unit(personal_exp))
     correlation(
         "Age and Experience",
         "Age",
@@ -767,6 +771,8 @@ def platforms(rows):
         "aix": "AIX",
         "android": "Android",
         "bsd": "BSD",
+        "chromeos": "Chrome OS",
+        "ios": "iOS",
         "linux": "Linux",
         "macos": "macOS",
         "windows": "Windows",
@@ -777,6 +783,7 @@ def platforms(rows):
     most_pref = {"linux": 0.5, "macos": 1, "windows": 0.5}
     most_used = {"linux": 0.5, "macos": 1, "windows": 0.5}
     name_count = {}
+    primary_used = {}
 
     ages = []
     genders = []
@@ -790,7 +797,7 @@ def platforms(rows):
         combined_pref[pf] = []
         combined_used[pf] = []
 
-    print("\"unhappy\":")
+    print('"unhappy":')
 
     for row in rows:
         pref = list_field(row[label["platforms_by_pref"]])
@@ -804,6 +811,12 @@ def platforms(rows):
 
         for name in unique(pref, used):
             inc(name_count, name)
+
+        so_used = [x for x in used if x in ["bsd", "linux", "macos", "windows", "wsl"]]
+        print("stack overflow comparison:", ", ".join(so_used), file=sys.stderr)
+
+        for name in so_used[: max(1, int(len(so_used) / 2))]:
+            inc(primary_used, name)
 
         inc(most_pref, pref[0])
         inc(most_used, used[0])
@@ -824,6 +837,9 @@ def platforms(rows):
         print("   ", pref[0], "vs", ", ".join(used))
 
     print()
+
+    print("primary:")
+    counts(display_name, primary_used, "    ")
 
     print("most mentioned:")
     counts(display_name, name_count, "    ")
@@ -888,9 +904,7 @@ def term(rows, terms):
                 print("    " + text, file=sys.stderr)
                 print(file=sys.stderr)
 
-                category = which(
-                    item[0], ["awesome", "awful", "preferred", "used"]
-                )
+                category = which(item[0], ["awesome", "awful", "preferred", "used"])
                 points[category] = points.get(category, 0) + 1
 
     counts({}, points, "    ")
@@ -1099,12 +1113,10 @@ def tools(rows):
 
     # Combine popular IDEs to check demographic/experience correlations.
     combined_pref["ide"] = [
-        min(e)
-        for e in zip(combined_pref["jetbrains"], combined_pref["vscode"])
+        min(e) for e in zip(combined_pref["jetbrains"], combined_pref["vscode"])
     ]
     combined_used["ide"] = [
-        min(e)
-        for e in zip(combined_used["jetbrains"], combined_used["vscode"])
+        min(e) for e in zip(combined_used["jetbrains"], combined_used["vscode"])
     ]
 
     print("tool preference and demographic/experience correlations:")
@@ -1213,6 +1225,9 @@ print()
 languages(rows)
 platforms(rows)
 tools(rows)
+
+print("correlations tested:", correlations_tested)
+print()
 
 print("specific terms:")
 print()

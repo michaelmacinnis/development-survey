@@ -126,13 +126,20 @@ Kendall: 0.402 (0.002), R-Squared: 0.465 (0.004), Spearman: 0.535 (0.001), RMSD:
 platforms:
 
 "unhappy":
-    linux vs macos, windows, android, linux, iOS, wsl, bsd
+    linux vs macos, windows, android, linux, ios, wsl, bsd
     windows vs android, windows, wsl, linux, linux
     macos vs windows, linux, linux, macos
     macos vs windows, macos
     linux vs macos, windows, linux, wsl, aix
     linux vs windows, macos, linux, wsl
     wsl vs linux, wsl, bsd
+
+primary:
+    Windows: 16
+    macOS: 14
+    Linux: 12
+    WSL: 2
+    BSD: 1
 
 most mentioned:
     Windows: 30
@@ -143,7 +150,7 @@ most mentioned:
     Android: 10
     BSD: 4
     AIX: 1
-    ChromeOS: 1
+    Chrome OS: 1
     Web: 1
 
 most preferred:
@@ -220,6 +227,8 @@ tool preference correlations:
 Kendall: 0.431 (0.008), R-Squared: 0.531 (0.004), Spearman: 0.564 (0.002), RMSD: 0.301 Docker and git have a strong positive correlation
 
 tool use correlations:
+
+correlations tested: 529
 
 specific terms:
 
