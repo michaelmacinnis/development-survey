@@ -239,7 +239,7 @@ def correlation(title, k1, k2, v1, v2, plot=False):
         scores = scores.replace(*e)
 
     plt.scatter(v1, v2)
-#    plt.title("\n".join([title, scores]))
+    #    plt.title("\n".join([title, scores]))
     plt.title(scores)
     plt.xlabel(k1)
     plt.ylabel(k2)
