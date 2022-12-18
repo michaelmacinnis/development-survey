@@ -1,0 +1,106 @@
+replacing abandoned or for personal use only with abandoned
+replacing android studio with jetbrains
+replacing and so missing at least one of the steps above. with and 
+replacing assembler with assembly
+replacing azure arm with azure
+replacing azure devops with azure
+replacing bash with shell
+replacing bicep with azure
+replacing bitbucket with atlassian
+replacing bitbucket) with atlassian
+replacing bsd with bsd
+replacing c++ (also for embedded devices) with c++
+replacing centos with linux
+replacing chrome os with ChromeOS
+replacing clang with llvm
+replacing clion with jetbrains
+replacing c++ (mainly for embedded devices) with c++
+replacing confluence with atlassian
+replacing datagrip with jetbrains
+replacing discord (communication) with discord
+replacing each fills a niche and fulfills a role with each fills a niche
+replacing freebsd with bsd
+replacing gcs with google cloud
+replacing gimp) with gimp
+replacing github ci with github
+replacing goland with jetbrains
+replacing golang with go
+replacing google cloud platform with google cloud
+replacing google docs (incl. drawing tools) with google docs
+replacing google docs with googledocs
+replacing googledoc with googledocs
+replacing google sheets with googledocs
+replacing (html with html
+replacing imovie (video editing) (skype with imovie
+replacing intellij idea with intellij
+replacing intellij with jetbrains
+replacing ios with iOS
+replacing irc) with irc
+replacing it's hard to give preference with it's hard to give
+replacing javascript) with javascript
+replacing jetbrains ide with jetbrains
+replacing jira with atlassian
+replacing js for web with js
+replacing js with javascript
+replacing jupyter) - i am sure i missed many things. the order is not necessarily from the most to least frequently used. with jupyter
+replacing jupyternotebooks with jupyter
+replacing jupyter notebook with jupyter
+replacing linux (centos with linux
+replacing linux (currently 18.04 and 20.04 with linux
+replacing linux (debian) with linux
+replacing linux (desktop) with linux
+replacing linux (server) with linux
+replacing linux (ubuntu) with linux
+replacing mac os with macos
+replacing mac with macos
+replacing md for complex with md
+replacing md with markdown
+replacing mint) with linux
+replacing minukube with minikube
+replacing msteams) with msteams
+replacing mvn with maven
+replacing mysql) with mysql
+replacing node.js) with node.js
+replacing none - all my programs are ones in which i've only had a small contribution with none - all
+replacing note: they're quite orthogonal in the sense that i avoid overlapping software and each one fills a particular niche with note: they
+replacing omnigraffle (for sketching architectural diagrams etc) with omnigraffle
+replacing pharo (ide) with pharo
+replacing plain bash (ad hoc scripts) with shell
+replacing platforms (tensorflow with tensorflow
+replacing power bi with powerbi
+replacing pycharm with jetbrains
+replacing rancher linux with linux
+replacing rest of the pack wouldn't reach the preferred list (all together at the bottom) with rest of the pack
+replacing rider (c# ide from jetbrains) with rider
+replacing rider with jetbrains
+replacing rubymine with ruby
+replacing ruby on rails with ruby
+replacing scikitlearn with scikit-learn
+replacing search engine (i admit i use google) with search engine
+replacing shell scripting with shell
+replacing she'll scripts with she'll
+replacing shell scripts with shell
+replacing she'll with shell
+replacing sh with shell
+replacing smalltalk (pharo) with smalltalk
+replacing sniffers (for network debugging) with sniffers
+replacing sql for db interactions with sql
+replacing sqlite with sql
+replacing .... (this question is too broad) with ...
+replacing trello) with trello
+replacing used to deploy web stuff) with used to deploy
+replacing used to develop and run non-web stuff) with used to develop
+replacing vim with vi
+replacing virtualbox) with virtualbox
+replacing visual studio code with vscode
+replacing vmware workstation with vmware
+replacing vs code with vscode
+replacing windows 10 with windows
+replacing windows (2012+) with windows
+replacing windows (3.xx with windows
+replacing windows (currently 10 and 11 with windows
+replacing writing debugging with writing
+replacing wsl linux with wsl 
+replacing wsl (ubuntu) with wsl 
+replacing wsl  with wsl
+replacing x86 with assembly
