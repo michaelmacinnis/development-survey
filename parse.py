@@ -371,15 +371,6 @@ def ranked(lst):
     return rank
 
 
-def sentiment(row, terms):
-    if find(row[label["awesome"]], terms):
-        return 1.0
-    elif find(row[label["awful"]], terms):
-        return 0.0
-    else:
-        return 0.5
-
-
 def size(n):
     n = abs(n)
 
